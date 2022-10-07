@@ -40,9 +40,9 @@ module.exports = {
         ]
       },
       {
-        test: /\.(ts|tsx)$/,
+        test: /\.(ts|tsx|js)$/,
         include: [path.resolve(__dirname, '../src')],
-        enforce: 'pre',
+        exclude: /node_modules/,
         use: ['thread-loader', 'babel-loader']
       },
       {
@@ -54,7 +54,7 @@ module.exports = {
             maxSize: 10 * 1024, // 10kb
           }
         },
-        generator:{ 
+        generator:{
           filename:'static/images/[name].[contenthash:6][ext]'
         },
       },
@@ -66,7 +66,7 @@ module.exports = {
             maxSize: 10 * 1024, // 小于10kb转base64位
           }
         },
-        generator:{ 
+        generator:{
           filename:'static/fonts/[name].[contenthash:6][ext]', // 文件输出目录和命名
         },
       },
@@ -78,7 +78,7 @@ module.exports = {
             maxSize: 10 * 1024, // 小于10kb转base64位
           }
         },
-        generator:{ 
+        generator:{
           filename:'static/media/[name].[contenthash:6][ext]', // 文件输出目录和命名
         },
       }
