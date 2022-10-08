@@ -2,7 +2,7 @@ import React, { lazy, Suspense, useState } from 'react'
 import smallImg from './assets/imgs/5kb.png'
 import bigImg from './assets/imgs/22kb.png'
 import Class from './components/Class'
-import './app.less'
+// import './app.less'
 // import BasicWrapper from './pages/styleConfig/BasicWrapper/BasicWrapper'
 import BasicWrapper from './pages/styleConfig/basicWrapper/BasicWrapper'
 
